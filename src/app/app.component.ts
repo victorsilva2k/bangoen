@@ -1,5 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
+export class User{
+  constructor(
+    public userId: number,
+    public id: number,
+    public body: string,
+    public title: string
+  ){
+
+  }
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +17,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bangoen';
+  public users: User[] = [];
+
 }
